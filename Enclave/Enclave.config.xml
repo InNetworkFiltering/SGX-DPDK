@@ -1,0 +1,19 @@
+<EnclaveConfiguration>
+  <ProdID>0</ProdID>
+  <ISVSVN>0</ISVSVN>
+  <StackMaxSize>0x40000</StackMaxSize>
+  <HeapMaxSize>0x10000000</HeapMaxSize>
+             <!--  100000 = 2^20 = 1MB; -->
+             <!-- 1000000 = 16MB; -->
+             <!-- 2000000 = 32MB; -->
+             <!-- 4000000 = 64MB; -->
+  <TCSNum>1</TCSNum>
+  <TCSPolicy>1</TCSPolicy>
+  <!-- TCS management policy. -->
+  <!-- 0 is bound to the untrusted thread. -->
+  <!-- 1 is not bound to the untrusted thread. -->
+  <DisableDebug>0</DisableDebug>
+  <!-- Recommend changing 'DisableDebug' to 1 to make the enclave undebuggable for enclave release -->
+  <MiscSelect>0</MiscSelect>
+  <MiscMask>0xFFFFFFFF</MiscMask>
+</EnclaveConfiguration>

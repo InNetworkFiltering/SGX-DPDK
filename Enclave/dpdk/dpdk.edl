@@ -1,0 +1,11 @@
+enclave {
+	include "dpdk_proxy_type.h"
+
+    trusted {
+        public int ecall_rte_eal_init(int argc, [user_check] char** argv);
+    };
+
+	untrusted {
+		void ocall_rte_pktmbuf_free([user_check] struct rte_mbuf *m);
+	};
+};
